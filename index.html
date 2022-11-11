@@ -5,9 +5,134 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Spotify Web</title>
     </head>
     <body>
-        
+        <div class="contenitore-all">
+            <!-- Sidebar -->
+
+            <aside>
+                <div class="row">
+                    <div class="col-80">
+                        <div class="contenuto-sup">
+                            <div class="logo">
+                                <img src="./img/logo.svg" alt="logo-spotify">
+                            </div>
+                            <div class="menu-left-1">
+                                <div class="item">
+                                    <i class="fa-solid fa-house"></i>
+                                    <a href="index.html"><h3>Home</h3></a>
+                                </div>
+                                <div class="item">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <a href="#"><h3>Cerca</h3></a>
+                                </div>
+                                <div class="item">
+                                    <i class="fa-solid fa-sliders"></i>
+                                    <a href="#"><h3>La tua libreria</h3></a>
+                                </div>
+
+                            </div>
+                            <div class="menu-left-2">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-20">
+
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- Conenitore header e main-->
+
+            <div class="contenitore-header-main">
+
+                <!-- Header -->
+
+                <header>
+
+                </header>
+
+                <!-- Main -->
+
+                <main>
+                    <div class="content">
+
+                    </div>
+                </main>
+
+            </div>
+        </div>
+            
+
+        <!-- Footer -->
+
+        <footer>
+            <div class="row space-between">
+
+                <!-- Colonna sinistra footer-->
+
+                <div class="col col-200">
+                    <div class="contenuto-col-sx">
+                        <div class="musica-riproduzione">       
+                            <img src="./img/sinister.jpeg" alt="copertina-sinister">
+                            <div class="testo-musica">
+                                <h3>Sinister</h3>
+                                <p>Brano Nome</p>
+                            </div>
+                        </div>
+                        <div class="icone-rirpoduzione">       
+                            <div class="icone">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-folder"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colonna centrale footer-->
+
+                <div class="col col-player">
+                    <div class="contenitore-player">                             
+                        <div class="icone-player">
+                            <i class="fa-solid fa-shuffle"></i>
+                            <i class="fa-solid fa-backward-step"></i>
+                            <i class="fa-regular fa-circle-play"></i>
+                            <i class="fa-solid fa-forward-step"></i>
+                            <i class="fa-solid fa-arrow-rotate-right"></i>
+                        </div>                   
+                        <div class="player">
+                            <span class="time"><p>0.25</p></span>
+                            <input type="range" id="volume" name="volume" min="0" max="10">
+                            <span class="time"><p>4.35</p></span>
+                        </div>                      
+                    </div>
+                </div>
+
+                <!-- Colonna destra footer-->
+
+                <div class="col col-200">
+                    <div class="contenuto-col-dx">
+                        <div class="icone-layout">       
+                            <div class="icone">
+                                <i class="fa-solid fa-list-ul"></i>
+                                <i class="fa-solid fa-desktop"></i>
+                                <i class="fa-solid fa-volume-high"></i>
+                            </div>
+                        </div>
+                        <div class="icone-volume">       
+                            <div class="icone">
+                                <input type="range" id="volume" name="volume" min="0" max="10">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
