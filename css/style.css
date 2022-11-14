@@ -71,6 +71,10 @@ h3 {
     width: calc(200px - 1rem);
 }
 
+.col-100 {
+    width: 100%;
+}
+
 .col-player {
     width: calc(100% - 400px);
 }
@@ -90,7 +94,7 @@ h3 {
 
 header {
     height: 100px;
-    width: 100%;
+    width: calc(100% - 200px);
     position: fixed;
     background-color: rgb(0, 0, 0, 0.5);
 }
@@ -106,6 +110,8 @@ footer {
     background-color: #282828;
     width: 100%;
     padding: 0.8rem;
+    z-index: 10;
+    position: fixed;
 }
 
 aside {
@@ -116,12 +122,12 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 }
 
 .contenitore-header-main {
     width: calc(100vw - 200px);
     height: 100%;
-    background-color: blue;
     position: relative;
     overflow-y: auto;
 }
@@ -131,6 +137,14 @@ aside {
 }
 
 /* Sidebar */
+
+aside .col-20 {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 1rem 0;
+    background-color: #000;
+}
 
 aside a {
     text-decoration: none;
@@ -154,6 +168,10 @@ aside a:hover {
 }
 
 .menu-left-1 a:hover {
+    border-left: 2px solid #1db954;
+}
+
+.menu-left-1 a:checked {
     border-left: 2px solid #1db954;
 }
 
@@ -189,6 +207,10 @@ aside .nav-titles {
 .logo img {
     padding: 0 0 0 1rem;
     width: 70%;
+}
+
+.logo a:last-child {
+    display: none;
 }
 
 .list-overflow {
@@ -257,6 +279,38 @@ aside .nav-titles {
     margin-right: 1rem;
 }
 
+/* Sezione interna - header e main */
+
+header .contenuto-header {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+}
+
+header .row {
+    height: 100%;
+}
+
+header a h2 {
+    text-transform: uppercase;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem 3rem;
+    border: 0.1rem solid #fff;
+    border-radius: 25rem;
+    transition: transform 0.2s;
+    transform-origin:center right;
+}
+
+header a:hover {
+    transform: scale(1.1);
+}
+
 /* Footer */
 
 
@@ -297,6 +351,20 @@ footer .contenuto-col-sx i:hover {
     color: #fff;
 }
 
+footer .contenuto-col-sx a {
+    text-decoration: none;
+}
+
+footer .contenuto-col-sx a p {
+    text-decoration: none;
+    padding-bottom: 0.1rem;
+}
+
+footer .contenuto-col-sx a p:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
 .icone-volume {
     width: 60%;
     display: flex;
@@ -309,23 +377,29 @@ footer .contenuto-col-sx i:hover {
     font-size: .9rem;
 }
 
-i:hover {    color: #828282;
+footer i:hover {    
+    color: #828282;
 }
 
 .contenitore-player {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 25%;
 }
 
 .icone-player {
-    width: 50%;
+    /* width: 50%; */
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     color: #fff;
-    padding-bottom: 1rem;
+    padding: 1rem;
     font-size: 1.4rem;
+}
+
+.icone-player i {
+    padding: 0 1rem
 }
 
 .icone-player i:nth-child(3){
@@ -373,6 +447,170 @@ input[type=range]:hover::-webkit-slider-thumb {
     margin-left: -.5rem;
     background: #fff;
     box-shadow: -20rem 0 0 20rem #1db954;
+}
+
+/* Media Query */
+
+@media screen and (max-width:444px) {
+    .icone-player {
+        justify-content: space-between;
+        padding: 1rem 0
+    }
+
+    .icone-player i {
+        padding: initial;
+    }
+}
+
+@media screen and (max-width:576px) {
+
+    aside .col-20 {
+        position: initial;
+    }
+
+    aside {
+        text-align: center;
+        padding: 1rem 0.5rem;
+        width: 50px;
+    }
+
+    aside i {
+        padding-right: 0;
+    }
+
+    aside a {
+        text-align: center;
+    }
+
+    .logo a:first-child {
+        display: none;
+    }
+
+    .logo a:last-child {
+        display: block;
+    }
+
+    .logo img {
+        width: 100%;
+        padding: 0;
+    }
+
+    .menu-left-1 {
+        align-items:center
+    }
+
+    .menu-left-1 h3 {
+        display: none;
+    }
+
+    .menu-left-1 a {
+        padding: 0.5rem 0;
+        font-size: ;
+        border: none;
+    }
+
+    .menu-left-2 {
+        display: none;
+    }
+
+    .contenuto-inf {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenuto-inf img {
+        margin: 1rem 0 0 0;
+    }
+
+    .contenuto-inf h3, .contenuto-inf hr {
+        display: none;
+    }
+
+    .contenitore-header-main {
+        width: calc(100vw - 50px);
+    }
+
+    header {
+        width: calc(100% - 50px);
+    }
+
+    .musica-riproduzione {
+        display: block;
+        width: 100%;
+    }
+
+    .contenitore-player {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contenuto-col-sx {
+        flex-direction: column;
+    }
+
+    .contenuto-col-sx .icone-rirpoduzione {
+        height: 60%;
+    }
+
+    .icone-rirpoduzione {
+        width: 100%;
+    }
+
+    .icone-rirpoduzione .icone {
+        height: 100%;
+        justify-content: flex-start;
+    }
+
+    .testo-musica {
+        padding: 0.5rem 0;
+    }
+
+    footer .fa-heart {
+        padding-right: 0.5rem;
+    }
+}
+
+@media screen and (max-width:767px) {
+    footer .col-200 {
+        width: 20%;
+    }
+
+    footer .col-player {
+        width: 60%;
+    }
+
+    .icone-player {
+        width: 100%;
+    }
+
+    .contenitore-player {
+        padding: 0 10%
+    }
+
+    .contenuto-col-dx {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .icone-volume, .icone-layout {
+        width: 100%;
+    }
+
+    .icone-volume {
+        height: initial;
+    }
+
+    .icone-layout .icone {
+        justify-content: flex-end;
+        padding-bottom: 1rem;
+    }
+
+    .icone-layout .icone i {
+        margin-left: 1rem;
+    }
 }
 
 
