@@ -154,8 +154,21 @@ aside {
 
 /* Sidebar */
 
+aside .contenuto-sup {
+    overflow-y: hidden;
+}
+
+aside .contenuto-inf {
+    padding-top: 1rem;
+}
+
+.contenuto-sup ul {
+    height: 27vh;
+    overflow-y: auto;    
+}
+
 aside .col-20 {
-    position: absolute;
+    position: initial;
     width: 100%;
     bottom: 0;
     padding: 1rem 0;
@@ -223,11 +236,6 @@ aside .nav-titles {
 
 .logo a:last-child {
     display: none;
-}
-
-.list-overflow {
-    overflow-y: auto;
-    height: 200px;
 }
 
 .list-overflow li {
