@@ -68,6 +68,11 @@ h3 {
     flex-wrap: wrap;
 }
 
+.no-wrap {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
 .flex-direction-col {
     flex-direction: column;
 }
@@ -587,6 +592,7 @@ input[type=range]:hover::-webkit-slider-thumb {
 
     main .col-sesto {
         width: calc(100% / 2 - 1rem);
+        min-width: 50%;
     }
 
     .artisti .card, .consigliati .card {
@@ -748,6 +754,7 @@ input[type=range]:hover::-webkit-slider-thumb {
 
     .col-sesto {
         width: calc(100% / 4 - 1rem);
+        min-width: 25%;
     }
 
     .card {
